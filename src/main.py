@@ -7,7 +7,8 @@ def main():
     logger.info('frames')
 
     numbers = src.algorithms.numbers.Numbers()
-    logger.info(numbers.exc())
+    logger.info(numbers.series_reproducible())
+    logger.info(numbers.series_variable())
 
 
 if __name__ == '__main__':
