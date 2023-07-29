@@ -56,7 +56,7 @@ Build a new container image using the Dockerfile in the current directory, i.e.,
 
 ### References
 
-*  <a href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html#nvidia-compute-software-support-on-wsl-2">NVIDIA Compute Software Support on </a><abbr title="WSL: Windows Subsystem for Linux">WSL 2</abbr>
+*  <a href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html#nvidia-compute-software-support-on-wsl-2">NVIDIA Compute Software Support on Windows Subsystem for Linux (WSL) 2</a>
 * [Docker & NVIDIA](https://docs.nvidia.com/ai-enterprise/deployment-guide-vmware/0.1.0/docker.html)
 
 <br>
