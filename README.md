@@ -2,7 +2,7 @@
 
 <br>
 
-### Notes ($\textsc{In \: Progress}$)
+### Notes ($In \: Progress$)
 
 Explore the base image
 
