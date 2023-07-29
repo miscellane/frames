@@ -1,3 +1,6 @@
+"""
+numbers.py
+"""
 import secrets
 import numpy as np
 import pandas as pd
@@ -6,7 +9,9 @@ import pandas as pd
 class Numbers:
 
     def __init__(self) -> None:
-
+        """
+        Constructor
+        """
 
         self.__size = (16, 1)
         constant = 256
@@ -14,12 +19,18 @@ class Numbers:
         self.__constant = constant
 
     def series_reproducible(self) -> np.ndarray:
+        """
+        A reproducible series
+        """
 
         generator = np.random.default_rng(seed=self.__constant)
 
         return generator.random(size=self.__size)
     
     def series_variable(self) -> pd.DataFrame:
+        """
+        A more or less irreproducible series
+        """
 
         generator = np.random.default_rng(seed=self.__variable)
 
