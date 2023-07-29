@@ -2,7 +2,7 @@
 
 <br>
 
-### Notes ($In Progress$)
+### Notes ($In \em Progress$)
 
 Explore the base image
 
