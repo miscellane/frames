@@ -1,8 +1,5 @@
 FROM jupyter/base-notebook
 
-# Delete the default application directory
-RUN rm -rf /home/jovyan
-
 # Set application directory <app>
 WORKDIR /app
 
