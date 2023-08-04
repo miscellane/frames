@@ -25,4 +25,4 @@ USER algebra
 
 # Finally
 WORKDIR /home/algebra
-CMD [ "/bin/bash"] 
+CMD [ "/bin/bash"]
