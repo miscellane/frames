@@ -8,11 +8,12 @@ ENV PATH=/opt/conda/bin:$PATH
 SHELL [ "/bin/bash", "-c" ]
 
 # Ubuntu ...
-RUN apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim && apt -y install wget
+RUN add-apt-repository ppa:git-core/ppa && \
+  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim && apt -y install wget && \
+  apt -y install git-all
 
 # From existing image ...
 COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
-
 RUN conda init bash
 SHELL [ "/bin/bash", "-c"]
 
