@@ -14,7 +14,7 @@ RUN apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim
 COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
 
 RUN conda init bash
-SHELL [ "/bin/bash", "c"]
+SHELL [ "/bin/bash", "-c"]
 
 # Finally
 CMD [ "/bin/bash" ]
