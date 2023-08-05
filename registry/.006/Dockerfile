@@ -13,7 +13,7 @@ RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vi
 
 # From existing image ...
 COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
-RUN conda init bash && conda config --set auto_activate_base false
+RUN conda init bash && conda config --set auto_activate_base true
 SHELL [ "/bin/bash", "-c"]
 
 # mkdir -p $CONDA_PREFIX/etc/conda/activate.d
