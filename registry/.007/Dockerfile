@@ -16,4 +16,5 @@ RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vi
   conda init bash && conda config --set auto_activate_base false && conda create --prefix /opt/conda/envs/tensors
 
 # Restarting ...
+RUN echo "conda activate tensors" >> ~/.bashrc
 SHELL [ "/bin/bash", "-c"]
