@@ -9,3 +9,9 @@ ENV PATH=/opt/conda/bin:$PATH
 
 # Environment
 SHELL [ "/bin/bash", "-c" ]
+
+# Ubuntu ...
+RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim && apt -y install wget && \ 
+  apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \ 
+  conda init bash && conda config --set auto_activate_base false && \ 
+  conda env create -f environment.yml -n tensors -p /opt/conda/envs
