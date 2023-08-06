@@ -1,6 +1,6 @@
 name: tensors
 channels:
-  - condaforge
+  - conda-forge
 dependencies:
   - python==3.11.*
   - cudatoolkit=11.8.0
