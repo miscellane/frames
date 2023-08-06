@@ -1,6 +1,6 @@
 <br>
 
-[.008](/README.md)
+[.008](./registry/.008/README.md)
 
 <br>
 
