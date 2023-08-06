@@ -11,3 +11,15 @@ Important references:
   * [Installing JAX](https://github.com/google/jax#installation): Installs `jax` & `jaxlib`
   * [PyMC installation notes vis-à-vis GPU (graphics processing units)](https://www.pymc-labs.io/blog-posts/pymc-stan-benchmark/#:~:text=worked%20for%20me%3A-,Install,-PyMC%20v4%20following)
 * [Benchmarking Example](https://www.pymc-labs.io/blog-posts/pymc-stan-benchmark/)
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
