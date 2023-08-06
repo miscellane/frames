@@ -7,11 +7,19 @@ RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vi
      apt install -y build-essential libssl-dev libffi-dev && \
      apt install -y python3 python3-dev python3-pip python3-yaml python3-venv
 
-# Directory
+
+# Set application directory <app>
 WORKDIR /app
 
+
+# This command copies requirements.txt into /app
+COPY ./requirements.txt .
+
+
 # Virtual Environment
-# python3 -m venv env && source env/bin/activate
+RUN python3 -m venv env && source env/bin/activate && python3 -m pip install --upgrade pip && \
+    python3 -m pip install --no-cache -r requirements.txt
+
 
 # Finally
 CMD [ "/bin/bash" ]
