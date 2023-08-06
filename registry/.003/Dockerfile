@@ -18,6 +18,8 @@ COPY ./requirements.txt .
 
 # Virtual Environment
 RUN python3 -m venv env && source env/bin/activate && python3 -m pip install --upgrade pip && \
+    python3 -m pip install pymc>=5.5.* && \
+    python3 -m pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
     python3 -m pip install --no-cache -r requirements.txt
 
 
