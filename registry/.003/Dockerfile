@@ -1,6 +1,8 @@
-# Ubuntu
-FROM ubuntu:lunar
 
+# Switch to a nvidia/cuda base and re-write accordingly
+
+# FROM nvidia/cuda:12.2.0-base-ubuntu22.04
+FROM ubuntu:lunar
 
 # Environment
 SHELL [ "/bin/bash", "-c" ]
