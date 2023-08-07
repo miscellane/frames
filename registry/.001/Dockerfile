@@ -8,7 +8,7 @@ FROM tensorflow/tensorflow:latest-gpu
 RUN add-apt-repository ppa:git-core/ppa && apt update && apt -y install sudo && \
     apt -y install vim && apt -y install git-all && \
     useradd -m algebra && echo "algebra:algebra" | chpasswd && \
-  adduser algebra sudo
+    adduser algebra sudo
 
 
 # Hence, setting the default user ...
