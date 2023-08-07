@@ -11,7 +11,7 @@ ENV PYTHON_VIRTUAL_ENV=/opt/env
 
 
 # Set application directory <app>
-WORKDIR /app
+WORKDIR /mathematics
 
 
 # Update & Upgrade: Switch to /opt/env
