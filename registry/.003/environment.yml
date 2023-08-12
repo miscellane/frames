@@ -11,7 +11,8 @@ dependencies:
   - pyyaml
   - pip
   - pip:
-    - nvidia-cudnn-cu11==8.6.0.163  
+    - nvidia-cudnn-cu11==8.6.0.163
+    - "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
     - requests
     - pytest
     - coverage
