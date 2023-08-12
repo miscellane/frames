@@ -4,18 +4,21 @@ channels:
 dependencies:
   - python==3.11.*
   - cudatoolkit=11.8.0
+  - requests
+  - pymc
+  - pip
+  - pip:
+    - nvidia-cudnn-cu11==8.6.0.163
+    - "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+    - numpyro
+    - blackjax  
   - dask
   - pandas
   - numpy
   - scikit-learn
   - pyyaml
-  - pip
-  - pip:
-    - nvidia-cudnn-cu11==8.6.0.163
-    - "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-    - requests
-    - pytest
-    - coverage
-    - pylint
-    - pytest-cov
-    - flake8
+  - pytest
+  - coverage
+  - pylint
+  - pytest-cov
+  - flake8
