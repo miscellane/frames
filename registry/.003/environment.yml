@@ -1,0 +1,20 @@
+name: tensors
+channels:
+  - conda-forge
+dependencies:
+  - python==3.11.*
+  - cudatoolkit=11.8.0
+  - dask
+  - pandas
+  - numpy
+  - scikit-learn
+  - pyyaml
+  - pip
+  - pip:
+    - nvidia-cudnn-cu11==8.6.0.163  
+    - requests
+    - pytest
+    - coverage
+    - pylint
+    - pytest-cov
+    - flake8
