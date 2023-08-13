@@ -15,6 +15,9 @@ WORKDIR /mathematics
 
 
 # Updates, additional packages, etc.
+# Upcoming
+#   https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
+#   https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#download
 RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim && apt -y install wget && \
      apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \
      apt install -y build-essential libssl-dev libffi-dev && \
