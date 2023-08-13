@@ -1,4 +1,4 @@
-# FROM greyhypotheses
+FROM baseImage
 
 # A user
 RUN useradd -m algebra && usermod -aG sudo algebra
@@ -8,3 +8,6 @@ USER algebra
 
 # Working directory
 WORKDIR /app
+
+# Hence
+CMD [ "/bin/bash"]
