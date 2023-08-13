@@ -20,7 +20,6 @@ RUN  apt update && apt -y install sudo && apt -y install vim && apt -y install w
      conda init bash && conda config --set auto_activate_base false && \
      conda env create -f environment.yml -p /opt/conda/envs/tensors
 ENV PYTHON_VIRTUAL_ENV=/opt/conda/envs/tensors
-ENV PATH="$PYTHON_VIRTUAL_ENV/bin:$PATH"
 
 # Restarting ...
 RUN echo "conda activate tensors" >> ~/.bashrc
