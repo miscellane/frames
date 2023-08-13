@@ -13,25 +13,29 @@ Explore the base image
 docker run --rm -i -t -p 10000:8888 jupyter/base-notebook
 ```
 
-```bash
-docker run --rm -i -t -p 10000:8888 -v ~/library/miscellane/frames jupyter/base-notebook
-```
-
 <br>
 
-Extend the base image via a `Dockerfile` ...
+Extend the base image via [Dockerfile](./Dockerfile), and the command
 
 ```bash
 docker build -t notebook .
 ```
 
+<br>
+
+Subsequently, a container/instance of the image `notebook` may be used as a development environment via the commands
+
 ```bash
 docker run --rm -i -t -p 127.0.0.1:10000:8888 -w /app --mount type=bind,src="$(pwd)",target=/app notebook
 ```
 
+or
+
 ```bash
 docker run -i -t -p 127.0.0.1:10000:8888 -w /app --mount type=bind,src="$(pwd)",target=/app notebook
 ```
+
+Note, the container's working environment, i.e., `-w`, is relative to this project's top directory.
 
 <br>
 <br>
@@ -45,13 +49,6 @@ An [interesting article](https://www.docker.com/blog/supercharging-ai-ml-develop
 wherein `-p 10000:8888` maps the host port $10000$ to container port $8888$
 
 <br>
-
-Build a new container image using the Dockerfile in the current directory, i.e., the closing `.`; the image's tag is `notebook`.
-
-> docker build -t notebook .
-
-
-<br>
 <br>
 
 ### References
@@ -63,6 +60,10 @@ Build a new container image using the Dockerfile in the current directory, i.e.,
 * [Python Package Index](https://pypi.org)
 * [`pip`](https://pip.pypa.io/en/stable/)
   * [requirements file format](https://pip.pypa.io/en/stable/reference/requirements-file-format/#requirements-file-format)
+* `jax`
+  * [python package index notes](https://pypi.org/project/jax/)
+  * [GitHub](https://github.com/google/jax)
+  * [Documentation](https://jax.readthedocs.io/en/latest/)
 
 <br>
 <br>
