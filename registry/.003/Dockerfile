@@ -30,6 +30,7 @@ RUN  apt update && apt -y install sudo && apt -y install vim && apt -y install w
      echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/:$CUDNN_PATH/lib:$LD_LIBRARY_PATH' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 
 
+# Python Virtual Environment
 ENV PYTHON_VIRTUAL_ENV=/opt/conda/envs/tensors
 
 
