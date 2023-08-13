@@ -1,4 +1,4 @@
-# Starting with a baseline NVIDIA/CUDA image
+# Starting with ...
 FROM nvidia/cuda:12.2.0-base-ubuntu22.04
 
 
