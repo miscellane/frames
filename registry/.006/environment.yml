@@ -1,0 +1,22 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - python==3.11.*
+  - cudatoolkit=11.8.0
+  - pip
+  - pip:
+    - nvidia-cudnn-cu11==8.6.0.163
+  - tensorflow==2.13.*
+  - dask>=2023.6.*
+  - scikit-learn
+  - numpy
+  - pandas
+  - jupyterlab>=4.0.*
+  - pyyaml
+  - requests>=2.31.*
+  - pytest>=7.4.*
+  - coverage
+  - pylint
+  - pytest-cov
+  - flake8
