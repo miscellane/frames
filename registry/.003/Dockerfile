@@ -17,12 +17,8 @@ SHELL [ "/bin/bash", "-c" ]
 
 
 # Update & Upgrade
-RUN  apt -y update && apt -y install sudo && apt -y install vim && apt -y install wget && \
+RUN  apt update && apt -y install sudo && apt -y install vim && apt -y install wget && \
      apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \
-     wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.1-1_all.deb && \
-     sudo dpkg -i cuda-keyring_1.1-1_all.deb && \
-     sudo apt-get update && \
-     sudo apt-get -y install cuda && \
      conda init bash && conda config --set auto_activate_base false && \
      conda env create -f environment.yml -p /opt/conda/envs/uncertainty && \
      echo "conda activate uncertainty" >> ~/.bashrc
