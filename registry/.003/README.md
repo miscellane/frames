@@ -1,6 +1,6 @@
 <br>
 
-**Dockerfile Notes**
+**JAX & Docker (cf. .009)**
 
 <br>
 
