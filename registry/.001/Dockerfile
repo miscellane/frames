@@ -2,9 +2,7 @@
 FROM tensorflow/tensorflow:latest-gpu
 
 
-# Updating the packages of the underlying operating system, and addressing privileges
-# ... apt install nvidia-modprobe
-# ... privileges -> https://linux.die.net/man/8/chpasswd
+# Updating ...
 RUN add-apt-repository ppa:git-core/ppa && apt update && apt -y install sudo && \
     apt -y install vim && apt -y install git-all && \
     useradd -m algebra && echo "algebra:algebra" | chpasswd && \
