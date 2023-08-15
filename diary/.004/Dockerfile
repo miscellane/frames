@@ -1,3 +1,4 @@
+# Starting with ...
 FROM baseImage
 
 # A user

@@ -1,5 +1,5 @@
 # Starting with ...
-FROM greyhypotheses/jax
+FROM baseImage
 
 
 # Set working directory

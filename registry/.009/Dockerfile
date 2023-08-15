@@ -1,5 +1,5 @@
-# Starting with a baseline NVIDIA/CUDA image
-FROM nvidia/cuda:12.2.0-base-ubuntu20.04
+# Starting with ...
+FROM nvidia/cuda:12.0.0-base-ubuntu22.04
 
 
 # From existing image ...

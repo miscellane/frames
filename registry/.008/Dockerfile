@@ -1,5 +1,5 @@
 # Starting with ...
-FROM nvidia/cuda:12.2.0-base-ubuntu22.04
+FROM nvidia/cuda:11.8.0-base-ubuntu22.04
 
 
 # From existing image ...
