@@ -1,34 +1,36 @@
-# Image
-FROM nvidia/cuda:12.2.0-base-ubuntu22.04
+# Starting with a baseline NVIDIA/CUDA image
+FROM nvidia/cuda:12.2.0-base-ubuntu20.04
+
+
+# From existing image ...
+COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
+ENV PATH=/opt/conda/bin:$PATH
+
+
+# The .yml
+WORKDIR /app
+COPY ./environment.yml .
 
 
 # Environment
 SHELL [ "/bin/bash", "-c" ]
 
 
-# Variables
-ENV PYTHON_VIRTUAL_ENV=/opt/env
+# Update & Upgrade
+RUN  apt update && apt -q -y upgrade && apt -y install sudo && apt -y install vim && apt -y install wget && \
+  apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \
+  conda init bash && conda config --set auto_activate_base false && \
+  conda env create --solver libmamba -f environment.yml -p /opt/conda/envs/networks && \
+  echo "conda activate networks" >> ~/.bashrc
 
 
-# Set application directory <app>
-WORKDIR /app
+# Virtual Environment
+ENV PYTHON_VIRTUAL_ENV=/opt/conda/envs/networks
 
 
-# This command copies requirements.txt into /app
-COPY ./.009/requirements.txt ./cudnn-linux-x86_64-8.9.3.28_cuda12-archive.tar.xz /app/
+# Path
+ENV PATH=${PYTHON_VIRTUAL_ENV}/bin:$PATH
 
 
-# Updates, additional packages, etc.
-RUN apt update && apt -y install sudo && apt -y install vim && apt -y install wget && \
-    apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \
-    apt install -y build-essential libssl-dev libffi-dev && \
-    apt install -y python3 python3-dev python3-pip python3-yaml python3-venv && \
-    python3 -m venv $PYTHON_VIRTUAL_ENV && \
-    source ${PYTHON_VIRTUAL_ENV}/bin/activate && \
-    python3 -m pip install --upgrade pip && \
-    python3 -m pip install --no-cache -r requirements.txt
-ENV PATH="$PYTHON_VIRTUAL_ENV/bin:$PATH"
-
-
-# Hence
-CMD ["/bin/bash"]
+# Restarting ...
+SHELL [ "/bin/bash", "-c"]
