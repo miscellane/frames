@@ -3,19 +3,22 @@ channels:
   - conda-forge
 dependencies:
   - python==3.11.*
-  - requests
-  - pymc
+  - pymc>=5.7.*
   - pip
   - pip:
     - --find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
     - "jax[cuda12_pip]" 
+    - jaxlib
     - numpyro
-    - blackjax  
+    - blackjax
+  - arviz
   - dask
-  - pandas
-  - numpy
   - scikit-learn
+  - numpy>=1.25.*
+  - pandas>=2.0.*
+  - scipy>=1.11.*
   - pyyaml
+  - requests
   - pytest
   - coverage
   - pylint
