@@ -1,9 +1,10 @@
 # Starting with ...
-FROM nvidia/cuda:12.2.0-base-ubuntu22.04
+FROM nvidia/cuda:12.2.0-base-ubuntu20.04
 
 
 # From existing image ...
 COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
+ENV PATH=/opt/conda/bin:$PATH
 
 
 # The .yml
