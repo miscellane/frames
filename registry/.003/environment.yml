@@ -1,14 +1,12 @@
-name: tensors
+name: uncertainty
 channels:
   - conda-forge
 dependencies:
   - python==3.11.*
-  - cudatoolkit=11.8.0
   - requests
   - pymc
   - pip
   - pip:
-    - nvidia-cudnn-cu11==8.6.0.163
     - --find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
     - "jax[cuda12_pip]" 
     - numpyro
