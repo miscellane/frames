@@ -1,5 +1,7 @@
 # Starting with ...
-FROM nvidia/cuda:12.2.0-base-ubuntu20.04
+# FROM nvidia/cuda:12.2.0-base-ubuntu20.04
+FROM nvidia/cuda:11.8.0-base-ubuntu20.04
+
 
 
 # From existing image ...
