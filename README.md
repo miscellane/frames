@@ -35,7 +35,7 @@ or
 docker run -i -t -p 127.0.0.1:10000:8888 -w /app --mount type=bind,src="$(pwd)",target=/app notebook
 ```
 
-Note, the container's working environment, i.e., `-w`, is relative to this project's top directory.
+Note, the container's working environment, i.e., `-w`, must be inline with this project's top directory.
 
 <br>
 <br>
