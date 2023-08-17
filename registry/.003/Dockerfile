@@ -21,8 +21,8 @@ RUN  apt update && apt -y install sudo && apt -y install vim && apt -y install w
      apt -y install software-properties-common && add-apt-repository ppa:git-core/ppa && apt -y install git-all && \
      conda init bash && conda config --set auto_activate_base false && \
      conda env create -f environment.yml -p /opt/conda/envs/uncertainty && \
-     echo "conda activate uncertainty" >> ~/.bashrc
-
+     echo "conda activate uncertainty" >> ~/.bashrc && source ~/.bashrc
+     
 
 # Virtual Environment
 ENV PYTHON_VIRTUAL_ENV=/opt/conda/envs/uncertainty
@@ -34,3 +34,11 @@ ENV PATH=${PYTHON_VIRTUAL_ENV}/bin:$PATH
 
 # Restarting ...
 SHELL [ "/bin/bash", "-c"]
+
+
+# And ...
+RUN mkdir -p $CONDA_PREFIX/etc/conda/activate.d && \
+    echo 'CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh && \
+    echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/:$CUDNN_PATH/lib:$LD_LIBRARY_PATH' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh && \
+    source $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+
