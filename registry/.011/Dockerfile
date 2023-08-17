@@ -1,6 +1,5 @@
 # Starting with ...
-FROM nvidia/cuda:11.8.0-base-ubuntu20.04
-
+FROM nvidia/cuda:11.8.0-runtime-ubuntu22.04
 
 # From existing image ...
 COPY --from=continuumio/miniconda3 /opt/conda /opt/conda
