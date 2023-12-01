@@ -24,7 +24,7 @@ The packages are from
 
 <br>
 
-Beaware of the effect of `apt -q -y upgrade`.
+Beware of the effect of `apt -q -y upgrade`.
 
 <br>
 <br>
