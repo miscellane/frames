@@ -58,7 +58,7 @@ or
 docker run -i -t -p 127.0.0.1:10000:8888 -w /app --mount type=bind,src="$(pwd)",target=/app notebook
 ```
 
-Note, the container's working environment, i.e., `-w`, must be inline with this project's top directory.
+Note, the container's working environment, i.e., `-w`, must be inline with this project's top directory.  For Visual Studio Code container attachment instructions study <a href="https://code.visualstudio.com/docs/devcontainers/attach-container" target="_blank">Attach Container<a/>.
 
 <br>
 <br>
