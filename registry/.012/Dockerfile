@@ -19,5 +19,4 @@ ENV PATH=${PYTHON_VIRTUAL_ENV}/bin:$PATH
 
 
 # Restarting ...
-# SHELL [ "/bin/bash", "conda activate transcribe"]
 SHELL ["/bin/bash", "-c"]
