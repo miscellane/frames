@@ -1,0 +1,14 @@
+name: transcribe
+channels:
+  - conda-forge
+dependencies:
+  - python==3.11.*
+  - pip
+  - Sphinx>=7.2.1
+  - sphinx-book-theme
+  - sphinx-rtd-theme
+  - pytest
+  - coverage
+  - pylint
+  - pytest-cov
+  - flake8
